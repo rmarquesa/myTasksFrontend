@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { Button, ButtonGroup, Table } from 'react-bootstrap'
+import { Button, Table } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 import api from '../../services/api'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap-icons/font/bootstrap-icons.css';
 
 interface ITasks {
   id: number;
@@ -23,10 +21,6 @@ const Tasks: React.FC = () => {
   useEffect(() => {
     loadTasks()
   },[])
-
-  function formatDate(date: Date) {
-    return new Date(date as Date).toLocaleString()
-  }
 
   async function loadTasks() {
     const response = await api.get('/tasks')

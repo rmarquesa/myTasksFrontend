@@ -23,19 +23,20 @@ const Detail: React.FC = () => {
   const currentDuration = new Date(moment().diff(moment(task?.created_at))).toLocaleTimeString()
   const totalDuration = new Date(moment(task?.updated_at).diff(moment(task?.created_at))).toLocaleTimeString()
 
-  useEffect(() => {
-    findTask()
-  }, [id])
-
   function back() {
     history(-1)
   }
 
   async function findTask() {
     const response = await api.get<ITask>(`/tasks/${id}`)
-    console.log(response)
+    //console.log(response)
     setTask(response.data)
   }
+
+  useEffect(() => {
+    findTask()
+  }, [])
+
 
   return(
     <div className='container'>

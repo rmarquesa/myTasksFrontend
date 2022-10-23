@@ -53,18 +53,6 @@ const TaskForm: React.FC = () => {
     })
   }
 
-  function editTask(id: number) {
-    history(`/newtask/${id}`)
-  }
-
-  async function removeTask(id: number) {
-    window.confirm(
-      "Do you realy want remove this task?"
-    ) ? await api.delete(`/tasks/${id}`) : back()
-    back()
-  }  
-
-
   return( 
     <div className='container'>
       <br />

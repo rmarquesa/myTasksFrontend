@@ -1,10 +1,10 @@
 import axios from 'axios'
 
-const MYTASKS_BACKEND_HOST = process.env.MYTASKS_BACKEND_HOST
-const MYTASKS_BACKEND_PORT = process.env.MYTASKS_BACKEND_PORT
+const HOST = process.env.REACT_APP_HOST_API_BACKEND
+const PORT = process.env.REACT_APP_PORT_API_BACKEND
 
 const api = axios.create({
-  baseURL: `http://${MYTASKS_BACKEND_HOST}:${MYTASKS_BACKEND_PORT}`
+  baseURL: `http://${HOST}:${PORT}`
 })
 
 export default api
