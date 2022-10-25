@@ -6,13 +6,9 @@ In the project directory, you can run:
 **WARNING** This application depends of [MyTasksBackend](https://github.com/rmarquesa/myTasksBackend)
  
 ``` sh
-# Export variables before start!
+# Export this variable before start!
 
-export REACT_APP_HOST_API_BACKEND="url backend"
-
-export REACT_APP_PORT_API_BACKEND="port backend"
-
-export PORT="port this application"
+export REACT_APP_BACKEND_URL="url backend"
 
 ```
 
